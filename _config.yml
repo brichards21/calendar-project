@@ -1,3 +1,5 @@
+theme: jekyll-theme-architect
 title: Diary of a Data Science Student
 description: Breanna Richards
-theme: jekyll-theme-architect
+header_pages:
+  - index.md

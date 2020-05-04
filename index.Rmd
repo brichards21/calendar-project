@@ -1,6 +1,6 @@
 ---
 output: md_document
-always_allow_html: yes
+always_allow_html: no
 ---
 
 ```{r setup, include=FALSE}
@@ -150,7 +150,7 @@ real_grouped <- real %>%
 
 # Diary of a... WHO?
 
-![cabin fever cover](./img/cabinfever.png | width=100)
+![cabin fever cover](./img/cabinfever.png)
 
 ## Dear Reader,
 Most people look forward to Spring Break. But, for Amherst students and many college students across the country, the start of Spring Break marked a fundamental change in our lives. 
