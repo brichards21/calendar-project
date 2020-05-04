@@ -1,0 +1,359 @@
+---
+output: md_document
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+library(ical)
+library(kableExtra)
+library(janitor)
+library(reshape2)
+library(data.table)
+library(ggplot2)
+library(ggthemes)
+library(gganimate)
+library(gifski)
+```
+
+```{r, include=FALSE}
+# the "include=FALSE" code chunk option suppresses the code and the output from this chunk from appearing in the knit file
+# please include your import of the data and any wrangling here
+Friday <- c(1, 8, 15)
+Saturday <- c(2, 9)
+Sunday <- c(3, 10)
+Monday <- c(4, 11)
+Tuesday <- c(5, 12)
+Wednesday <- c(6, 13)
+Thursday <- c(7, 14)
+
+#intended schedule
+intended <- ical_parse_df(file = "Intended Schedule_amherst.edu_mb1mq097hnqjuolgpc2ussr2l0@group.calendar.google.com.ics") %>%
+  mutate(start_datetime = with_tz(start, tzone = "America/New_York")
+    , end_datetime = with_tz(end, tzone = "America/New_York")
+    , length_sec = (end_datetime - start_datetime)*60
+    , length_min = length_sec/60
+    , length_hrs = length_min/60
+    , date = floor_date(start_datetime, unit = "day"))
+
+intended <- intended %>%
+  separate(length_sec, into = c("length_sec", "sec_label"), sep = " ") %>%
+  separate(length_min, into = c("length_min", "min_label"), sep = " ") %>%
+  separate(length_hrs, into = c("length_hrs", "hrs_label"), sep = " ") %>%
+  select(summary, length_sec, length_min, length_hrs, date) %>%
+ group_by(date) %>%
+  mutate(day_number = group_indices()) %>%
+  mutate(weekday = ifelse(day_number %in% Friday, "Friday",
+                          ifelse(day_number %in% Saturday, "Saturday",
+                                 ifelse(day_number %in% Sunday, "Sunday",
+                                       ifelse(day_number %in% Monday, "Monday",
+                                              ifelse(day_number %in% Tuesday, "Tuesday",
+                                                     ifelse(day_number %in% Wednesday, "Wednesday", "Thursday")))))))%>%
+  mutate(activity = case_when(
+    str_detect(summary, paste(c('Class', 'Theoretical Stats'), collapse='|')) ~ 'Class',
+    str_detect(summary, paste(c('Sing', 'Voice', 'Vocal'), collapse='|')) ~ 'Singing',
+    str_detect(summary, paste(c('Eat'), collapse='|')) ~ 'Eating',
+    str_detect(summary, paste(c('Cooking', 'Baking'), collapse='|')) ~ 'Cooking',
+    str_detect(summary, paste(c('Gaming'), collapse='|')) ~ 'Gaming',
+    str_detect(summary, paste(c('HW', 'Homework', 'Work'), collapse='|')) ~ 'Homework',
+    str_detect(summary, paste(c('Anime'), collapse='|')) ~ 'Anime',
+    str_detect(summary, paste(c('Homework + Gaming'), collapse='|')) ~ 'Homework, Gaming',
+    str_detect(summary, paste(c('Homework + Anime'), collapse='|')) ~ 'Homework, Anime',
+    str_detect(summary, paste(c('Dancing'), collapse='|')) ~ 'Dancing',
+    TRUE~NA_character_))
+
+homework_intended <- intended %>%
+  filter(activity == "Homework") %>%
+  mutate(multitask = ifelse(summary == "Homework + Anime" | summary == "Homework + Gaming" | summary == "DiffEq Homework + Anime" | summary == "Work + Anime" |  summary == "Data Science Homework + Anime", "TRUE", "FALSE"))
+
+homework_intended[11, "multitask"] <- "TRUE"
+homework_intended[, "length_min"] <- as.numeric(as.character(unlist(homework_intended[, "length_min"])))
+
+intended <- intended %>%
+  select(-summary)
+
+intended[, "length_min"] <- as.numeric(as.character(unlist(intended[, "length_min"])))
+intended[, "length_sec"] <- as.numeric(as.character(unlist(intended[, "length_sec"])))
+intended[, "length_hrs"] <- as.numeric(as.character(unlist(intended[, "length_hrs"])))
+
+#INTENDED SCHEDULE
+
+intend_grouped <- intended %>%
+  group_by(weekday, activity) %>%
+  summarise(total_min = sum(length_min))  %>%
+  #since we have 3 fridays and 2 of every other day
+  mutate(min_spent_per_day = ifelse(weekday == "Friday", (total_min/3), total_min/2))
+
+
+```
+
+```{r,  include=FALSE}
+#real schedule
+real <- ical_parse_df(file = "Real Schedule_amherst.edu_gbbcepto5ijkmcfd70bv318bhc@group.calendar.google.com.ics") %>%
+  mutate(start_datetime = with_tz(start, tzone = "America/New_York")
+    , end_datetime = with_tz(end, tzone = "America/New_York")
+    , length_sec = (end_datetime - start_datetime)*60
+    , length_min = length_sec/60
+    , length_hrs = length_min/60
+    , date = floor_date(start_datetime, unit = "day"))
+
+
+real <- real %>%
+  separate(length_sec, into = c("length_sec", "sec_label"), sep = " ") %>%
+  separate(length_min, into = c("length_min", "min_label"), sep = " ") %>%
+  separate(length_hrs, into = c("length_hrs", "hrs_label"), sep = " ") %>%
+  select(summary, length_sec, length_min, length_hrs, date) %>%
+ group_by(date) %>%
+  mutate(day_number = group_indices()) %>%
+  mutate(weekday = ifelse(day_number %in% Friday, "Friday",
+                          ifelse(day_number %in% Saturday, "Saturday",
+                                 ifelse(day_number %in% Sunday, "Sunday",
+                                       ifelse(day_number %in% Monday, "Monday",
+                                              ifelse(day_number %in% Tuesday, "Tuesday",
+                                                     ifelse(day_number %in% Wednesday, "Wednesday", "Thursday"))))))) %>%
+  mutate(activity = case_when(
+    str_detect(summary, paste(c('Class', 'Theoretical Stats'), collapse='|')) ~ 'Class',
+    str_detect(summary, paste(c('Sing', 'Voice'), collapse='|')) ~ 'Singing',
+    str_detect(summary, paste(c('Eat'), collapse='|')) ~ 'Eating',
+    str_detect(summary, paste(c('Cooking'), collapse='|')) ~ 'Cooking',
+    str_detect(summary, paste(c('Gaming'), collapse='|')) ~ 'Gaming',
+    str_detect(summary, paste(c('HW', 'Homework'), collapse='|')) ~ 'Homework',
+    str_detect(summary, paste(c('Anime'), collapse='|')) ~ 'Anime',
+    str_detect(summary, paste(c('Homework + Gaming'), collapse='|')) ~ 'Homework, Gaming',
+    str_detect(summary, paste(c('Homework + Anime'), collapse='|')) ~ 'Homework, Anime',
+    TRUE~NA_character_)) 
+
+homework_real <- real %>%
+  filter(activity == "Homework") %>%
+  mutate(multitask = ifelse(summary == "Homework + Anime" | summary == "Homework + Gaming" | summary == "DiffEq Homework + Anime" |  summary == "Data Science Homework + Anime" | summary == "DiffEq Homework + Anime ", "TRUE", "FALSE"))
+
+homework_real[21, "multitask"] <- "TRUE"
+homework_real[, "length_min"] <- as.numeric(as.character(unlist(homework_real[, "length_min"])))
+
+real <- real %>%
+  select(-summary)
+
+real[, "length_min"] <- as.numeric(as.character(unlist(real[, "length_min"])))
+real[, "length_sec"] <- as.numeric(as.character(unlist(real[, "length_sec"])))
+real[, "length_hrs"] <- as.numeric(as.character(unlist(real[, "length_hrs"])))
+
+#REAL SCHEDULE
+real_grouped <- real %>%
+  group_by(weekday, activity) %>%
+  summarise(total_min = sum(length_min))%>%
+  mutate(min_spent_per_day = ifelse(weekday == "Friday", (total_min/3), total_min/2))
+
+```
+
+
+# Diary of a... WHO?
+
+![cabin fever cover](./img/cabinfever.png)
+
+## Dear Reader,
+Most people look forward to Spring Break. But, for Amherst students and many college students across the country, the start of Spring Break marked a fundamental change in our lives. 
+\newline
+For those who circumstances allowed it, we would be sent home, not for vacation purposes, but to ride out the rest of our semesters in quarantine. 
+
+This diary is dedicated to answering the basic question: "how do I spend my time?"
+
+For 14 days straight, I used Google Calendar to schedule my time. I primarily used two different calendars, my intended schedule, and my real schedule. At the end of each day, I made a schedule of what I intended to do the next day, and when I intended to do them. 
+Then, I would record what I actually did during the days in a separate, real scheudule. 
+
+At the end of this two week period, I collected my data for wrangling and analysis.
+
+###Motivation + primary questions of interest
+Here are the primary questions of interest that I wanted to answer at the end of the two weeks.
+
+- What activity do I spend most of my time on, on a weekly basis? 
+
+- When (what weekday) do I accomplish the most homework?
+
+- How much time do I spend multitasking while doing my homework on a weekly basis?
+
+- How much time per week am I spending on my hobbies now, vs. when I was on campus?
+
+These questions will also be explored considering what I intended to do versus what I actually accomplished. 
+
+
+
+
+
+
+
+Create a "img" folder within your calendar-project repo and store the image files there.
+
+# Data collection
+
+I collected data by . . . 
+
+I can write a bulleted list like this:
+
+- here's the first thing I want to say
+- and I also want to say this
+- lastly, this
+
+And a numbered list like this:
+
+1. First thing
+2. Second thing
+3. Third thing
+
+# Results
+
+Here's what I found! 
+
+```{r, echo=FALSE}
+# the "echo=FALSE" code chunk option suppresses the code from this chunk from appearing in the knit file, but the code will still evaluate and the output will show up in the knit file
+
+ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "minutes per day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()
+
+
+
+
+ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "minutes per day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()
+
+```
+
+#Homework
+
+```{r, echo=FALSE}
+
+real_grouped_homework <- real_grouped %>%
+  filter(activity == "Homework") 
+
+intend_grouped_homework <- intend_grouped %>%
+  filter(activity == "Homework") 
+
+grouped_homework_col <- cbind(real_grouped_homework, intend_grouped_homework)
+
+real_grouped_homework <- real_grouped_homework %>%
+  mutate(schedule = "Real")
+intend_grouped_homework <- intend_grouped_homework %>%
+  mutate(schedule = "Intended")
+
+
+grouped_homework_df <- rbind(real_grouped_homework, intend_grouped_homework)
+
+myPlot <- ggplot(data = grouped_homework_df, aes(x = schedule, y = min_spent_per_day, fill = weekday)) + geom_col() + coord_flip() + labs(y = "Avg. Minutes per. day", title = "Time Spent on Homework per Day") + theme_wsj() + theme(plot.title = element_text(size=13), legend.title = element_text(size=10)) + theme(axis.title=element_text(size=12)) +
+  # gganimate specific bits:
+  transition_states(
+    weekday,
+    transition_length = 2,
+    state_length = 1
+  ) +
+  ease_aes('sine-in-out')
+
+# Save at gif:
+animate(myPlot, duration = 8, fps = 20, width = 200, height = 200, renderer = gifski_renderer())
+anim_save("output.gif")
+
+grouped_homework_col <- grouped_homework_col%>%
+  select(weekday, min_spent_per_day, min_spent_per_day1)
+
+
+kable(grouped_homework_col, 
+      col.names = c("Weekday", "Real Avg Minutes/day", "Intended Avg Minutes/day"), booktabs = TRUE, escape = FALSE, align = "c", "latex", caption = "Time Doing Homework by Schedule per. Day") %>%
+kable_styling(latex_options = "hold_position")
+```
+
+##Multi-tasking 
+
+```{r, echo=FALSE, message = FALSE}
+
+homework_real <- homework_real %>%
+  select(length_min, multitask)%>%
+  group_by(multitask) %>%
+  summarise(total_min = sum(length_min))
+
+homework_intended <- homework_intended %>%
+  select(length_min, multitask) %>%
+  group_by(multitask) %>%
+  summarise(total_min = sum(length_min))
+
+homework_real2 <- homework_real %>%
+  mutate(schedule = "Real",
+         prop = total_min/sum(total_min))
+
+homework_intended2 <- homework_intended %>%
+  mutate(schedule = "Intended",
+          prop = total_min/sum(total_min))
+
+#row 1-27 is homework real
+#row 28-59 is homework intended
+homework_df <- rbind(homework_real2, homework_intended2)
+
+homework_df <- homework_df %>%
+  mutate(multitask_label = ifelse(multitask == "TRUE", "Multitasking",
+                                  "No Multitasking"))
+
+
+  ggplot(data = homework_df, aes(x = multitask_label, y = prop, fill = multitask_label)) + geom_col() + facet_grid(~schedule) + labs(x = "Multitasking?", y = "Proportion", title = "Proportion of Homework Done Multitasking by Schedule Type") + theme_bw() + theme(axis.text.x = element_text(angle = -15)) + theme(legend.position = "none") + theme_wsj() + theme(plot.title = element_text(size=11), legend.title = element_text(size=10)) + theme(axis.title=element_text(size=9))
+```
+
+```{r, echo=FALSE}
+
+#real homework proportions multitasking vs. not
+
+homework_df_show <- cbind(homework_real2, homework_intended2)
+homework_real2 <- homework_real2 %>%
+  rename(
+     total_min_real = total_min,
+     schedule_real = schedule,
+       prop_real = prop
+  )
+homework_intended2 <- homework_intended2 %>%
+  rename(
+    multitask_int = multitask,
+     total_min_int = total_min,
+     schedule_int = schedule,
+       prop_int = prop
+  )
+
+homework_df_show <- cbind(homework_real2, homework_intended2)
+
+
+
+homework_df_show <- homework_df_show %>%
+  select(prop_real, prop_int)
+
+
+setattr(homework_df_show, "row.names", c("No Multitasking", "Multitasking"))
+
+#show table
+kable(homework_df_show, col.names = c("Real Proportion", "Intended Proportion"),  caption = "Doing Homework with and w/o Multitasking", booktabs = TRUE, escape = FALSE, align = "c", "latex") %>%
+kable_styling(latex_options = "hold_position")
+
+
+
+
+```
+
+#Hobbies
+```{r, echo=FALSE}
+real_hobbies <- real_grouped%>%
+  filter(activity == "Dancing" | activity == "Singing") %>%
+  mutate(schedule = "Real")
+
+intend_hobbies <- intend_grouped %>%
+  filter(activity == "Dancing" | activity == "Singing") %>%
+  mutate(schedule = "Intended")
+
+hobbies_df <- rbind(real_hobbies, intend_hobbies)
+
+ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per. Day", title = "Time Spent on Hobbies After Quarantine") + theme_economist() 
+
+
+#Before Quarentine
+weekday <- c("Sunday", "Monday", "Monday", "Tuesday", "Wednesday")
+activity <- c("Singing", "Singing", "Dancing", "Dancing", "Singing")
+min_spent_pday <- c(180, 120, 120, 120, 120)
+
+hobbies_bquarentine <- data.frame(weekday, activity, min_spent_pday)
+
+
+ggplot(hobbies_bquarentine, aes(x = activity, y = min_spent_pday, fill = weekday)) + geom_col()  + labs(title = "Time Spent on Hobbies Before Quarantine", y = "Avg. Minutes per. Day") + theme_economist() 
+```
+
