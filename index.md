@@ -1,7 +1,7 @@
 Diary of a... WHO?
 ==================
 
-![cabin fever cover](./img/cabinfever.png%20%7C%20width=100)
+![cabin fever cover](./img/cabinfever.png)
 
 Dear Reader,
 ------------
