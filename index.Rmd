@@ -204,7 +204,7 @@ Next, my hobbies were sprinkled into my schedule, which I'll take a more in-dept
 ```{r, echo=FALSE, fig.height=6, fig.width=7}
 # the "echo=FALSE" code chunk option suppresses the code from this chunk from appearing in the knit file, but the code will still evaluate and the output will show up in the knit file
 
-ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "minutes per day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight() + theme(axis.title=element_text(size=9))
+ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "Avg. Minutes per. day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight() + theme(axis.title=element_text(size=9))
 ```
 
 
@@ -213,7 +213,7 @@ Now on to what I actually accomplished. As far as distributions go, I accomplish
 ```{r, echo = FALSE}
 
 
-ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "minutes per day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()
+ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "Avg. Minutes per. day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()+ theme(axis.title=element_text(size=9))
 
 
 ```
