@@ -1,7 +1,7 @@
 Diary of a... WHO?
-==================
+------------------
 
-![cabin fever cover](./img/cabinfever.png)
+![totally real and not-fake diary cover](./img/cabinfever.png)
 
 Dear Reader,
 ------------
@@ -48,8 +48,7 @@ Results
 
 Here's what I found!
 
-insert image here
-=================
+![me looking out my window in quarantine](./img/window.png)
 
 First, I took a look at an overview of the activities that I plotteed in
 my intended and real calendars, and how much time I alloted for each
@@ -226,4 +225,25 @@ Reflection
 ==========
 
 This project has been extremely insightful to looking at how I spend my
-time.
+time. With this insight, I think I'm going to continue to use Google
+calendar to budget my time, and to get a better idea of what I can do to
+adjust my intended schedule in order to influence what I ultimately get
+done in the end.
+
+As someone who provides data, I expect that consumer data is being
+collected responsibly in line with laws, regulations, and the
+expectations of those who are having their data collected. I expect that
+my data be treated with care, not used inappropriately, such as being
+sold to skeetchy third-parties. I also expect that my data is used in a
+fair way and only for a purpose related to company activities, and that
+privacy policies are respected and clearly outlined.
+
+As people who analyzes others' data, I think statisticians have an
+absolute responsibility to uphold the protection and privacy of
+consumers' data. Data handlers must not collect data unneccessarily or
+excessively, sell the data, or indulge in activities that enable or
+facilitate illegitimate or unauthorized access to data. One of the
+biggest things that a data collector must master is communication. All
+data collectors must inform consumers about data breach possibilities
+and about what data are stored. Transparency is key for a respectable
+relationship between consumer and statistician/data collector.
