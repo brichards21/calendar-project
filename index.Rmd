@@ -366,6 +366,8 @@ While I intended to dance for about 20 minutes each Friday, I ended up doing no 
 Similarly, I planned to sing for 45 minutes on Wednesdays and 130 minutes on Fridays. However, what really happened is I didn't sing at all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I also indulged in singing on Thursdays for about 45 minutes, which I did not originally plan to do.
 \newline
 I really do enjoy singing and dancing, and I hope that seeing the data right in front of me motivates me to take a moment to breathe and spend time on the stress-free things that I enjoy the most. 
+\newline
+
 
 ```{r, echo=FALSE, fig.width=4, fig.height=4}
 real_hobbies <- real_grouped%>%
@@ -394,6 +396,8 @@ hobbies_bquarentine <- data.frame(weekday, activity, min_spent_pday)
 As mentioned before, I can compare my time spent on hobbies during quarantine to my time spent on hobbies before quarantine. Before quarantine, I was spending 7 hours a week singing with my acapella group at Amherst. 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also spent 4 hours a week dancing with the African Carribean Student Union on Campus, 2 hours on Monday, and 2 on Tuesday. 
 
 Evidently, my dancing productivity has gone down 4 hours a week, and my singing productivity has gone down by 320 minutes, or 5.33 hours a week. 
+
+
 ```{r, echo = FALSE}
 
 #new one
@@ -409,18 +413,22 @@ ggplot(hobbies_bquarentine, aes(x = activity, y = min_spent_pday, fill = weekday
 
 What activity do I spend most of my time on, on a weekly basis?
 \newline
+
 - On a weekly basis, I spend most of my time doing homework. I spend a little less time on homework than I intend to.
 
 When (what weekday) do I accomplish the most homework?
 \newline
+
 - I accomplish the most homework on Wednesdays and Saturdays.
 
 How much time do I spend multitasking while doing my homework on a weekly basis?
 \newline
+
 - I multitask on homework more than I intend to. While I intend to multitask about 22% of the time, I actually end up multitasking 37.7% of the time. 
 
 How much time per week am I spending on my hobbies now, vs. when I was on campus?
 \newline
+
 - In total, I'm spending 100 minutes a week on hobbies, although I intend to spend 195 minutes a week. Before quarentine, I spent 660 minutes per week on hobbies, 560 more than I'm spending now.
 
 

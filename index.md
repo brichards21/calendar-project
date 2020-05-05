@@ -193,27 +193,34 @@ Campus, 2 hours on Monday, and 2 on Tuesday.
 
 Evidently, my dancing productivity has gone down 4 hours a week, and my
 singing productivity has gone down by 320 minutes, or 5.33 hours a week.
+
 ![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)![](index_files/figure-markdown_strict/unnamed-chunk-10-2.png)
 
 Answering My Questions of Interest:
 -----------------------------------
 
-What activity do I spend most of my time on, on a weekly basis? - On a
-weekly basis, I spend most of my time doing homework. I spend a little
-less time on homework than I intend to.
+What activity do I spend most of my time on, on a weekly basis?
 
-When (what weekday) do I accomplish the most homework? - I accomplish
-the most homework on Wednesdays and Saturdays.
+-   On a weekly basis, I spend most of my time doing homework. I spend a
+    little less time on homework than I intend to.
+
+When (what weekday) do I accomplish the most homework?
+
+-   I accomplish the most homework on Wednesdays and Saturdays.
 
 How much time do I spend multitasking while doing my homework on a
-weekly basis? - I multitask on homework more than I intend to. While I
-intend to multitask about 22% of the time, I actually end up
-multitasking 37.7% of the time.
+weekly basis?
+
+-   I multitask on homework more than I intend to. While I intend to
+    multitask about 22% of the time, I actually end up multitasking
+    37.7% of the time.
 
 How much time per week am I spending on my hobbies now, vs. when I was
-on campus? - In total, I'm spending 100 minutes a week on hobbies,
-although I intend to spend 195 minutes a week. Before quarentine, I
-spent 660 minutes per week on hobbies, 560 more than I'm spending now.
+on campus?
+
+-   In total, I'm spending 100 minutes a week on hobbies, although I
+    intend to spend 195 minutes a week. Before quarentine, I spent 660
+    minutes per week on hobbies, 560 more than I'm spending now.
 
 Reflection
 ==========
