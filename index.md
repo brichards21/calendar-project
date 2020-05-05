@@ -1,8 +1,5 @@
-Cabin Fever During Covid-19
-===========================
-
-How Am I Spending My Time?
---------------------------
+Cabin Fever During Covid-19: How Am I Spending My Time?
+=======================================================
 
 ![](./img/cabinfever.png)
 
@@ -62,10 +59,9 @@ total amount of time spent over the two weeks, I decided to plot average
 time spent on these activities per weekday, so that I could look at what
 I would expect my time distribution to be for a single week. For
 example, if I spent 120 minutes in total watching anime on Mondays, I
-would only plot 120/2 = 60 minutes for Monday (Note: since I observed
-collected data for 3 Fridays for starting and ending on a Friday, Friday
-total time would be divided by 3 instead of 2). We can first observe
-what I intended to accomplish.
+would only plot 120/2 = 60 minutes for Monday (Note: since I collected
+data for 3 Fridays, Friday total time would be divided by 3 instead of
+2). We can first observe what I intended to accomplish.
 
 I can see from the bar chart below that the majority of my week was
 planned to be spent on doing homework. My schedule shows that I intended
@@ -89,8 +85,8 @@ time sprinkled in there as well.
 Now on to what I actually accomplished. As far as distributions go, I
 accomplished more or less what I intended to do, with some variation.
 Homework still clocks in as the activity that takes up most of my time
-on a weekly basis. However, it seems that I spent less time than I
-intended to doing homework. I really spent an average of 2,525 minutes,
+on a weekly basis. However, it seems that I spent less time doing
+homework than I intended to. I really spent an average of 2,525 minutes,
 42.08 hours, per week doing homework. Even if it's just a 5 hour
 difference, I learned that my school work took me less time than I
 thought it would take me. 42.08 hours a week is already enough time
@@ -111,7 +107,7 @@ each). Furthermore, as I expected to do the least amount of homework on
 Fridays, I actually did almost the same amount of homework on Fridays as
 I did on Wednesdays and Saturdays. I actually did the least amount of
 homework on Thursdays. The animated bar chart and table below look at
-homework more closely, and highlight the differences between my two
+homework more closely, and highlights the differences between my two
 schedules.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-5-1.gif)
@@ -181,8 +177,8 @@ didn't get to dance at all!
 
 ### Homework and Multi-tasking
 
-Now, let's focus in on homework and multitasking. I decided to do this,
-because I had a unique multitaking element to doing homework, that I
+Now, let's focus in on homework and multitasking. I decided to do this
+because I had a unique multitaking element to doing homework that I
 didn't list for any other activity in my schedules. When I was just
 doing homework, I marked that activity as 'Homework'. But when I did
 homework at the same time as another activity, I would mark it as
@@ -190,16 +186,16 @@ homework at the same time as another activity, I would mark it as
 always either watching anime or gaming.
 
 The bar chart below gives me insight into the proportion of homework
-that I multitasked while doing, faceted by what I intended to do and
-what I actually did. It looks like I intended to multitask on less of a
-proportion of my homework than I actually did. More specifically, I
+that I did while multitasking (or not), faceted by what I intended to do
+and what I actually did. It looks like I intended to multitask on less
+of a proportion of my homework than I actually did. More specifically, I
 intended to multitask 22% of the time I was doing my homework, but
 actually multitasked 37.7% of the time. Being that I spent less time on
-homework than I intended to, it may be safe to say that multitasking did
-not make me spend more time on my homework. In fact, maybe having
-something in the background, like a show or game, kept me focused. I
-noticed in the past that I tend to do really well with studying and work
-when I have one of my favorite shows playing as my
+homework than I intended to overall, it may be safe to say that
+multitasking did not make me spend more time on my homework. In fact,
+maybe having something in the background, like a show or game, kept me
+focused. I noticed in the past that I tend to do really well with
+studying and work when I have one of my favorite shows playing as my
 'homework-soundtrack'. The barchart and table below show my results more
 clearly.
 
@@ -237,29 +233,28 @@ clearly.
 ![](./img/hobbies.jpeg)
 
 Finally, we move on to my hobbies. In addition to plotting how much time
-I intended to spend/actually did spend on my hobbies, I also plotted how
-much time I used to spend on my hobbies when I was on campus for
-comparison purposes. Even though I didn't use a calendar when on campus,
-I was able to record this data because my hobbies were fine tuned to a
-set schedule every week at Amherst because I did them in clubs! I was
-able to plot the time that I spent based on when and for how long my
+I intended to spend/actually did spend on my hobbies, for comparison
+purposes, I also plotted how much time I spent on my hobbies when I was
+on campus. Even though I didn't use a calendar when on campus, I was
+able to record this data because my hobbies were fine tuned to a set
+schedule every week. This is because I did them in clubs! I was able to
+plot the time that I spent based on when and for how long my
 recreational clubs would meet each week. I decided to only focus on
-Dancing and Singing, since they were the hobbies I engaged the most in
-when I was at school.
+dancing and singing, since they were the hobbies that I engaged in the
+most when I was at school.
 
 We can tell from the bar chart below that while I intended to allocate
 more time for singing and dancing per week, overall, I actually spent a
 lot less time engaging in those activities.
 
-I really do enjoy singing and dancing, and I hope that seeing the data
-right in front of me motivates me to take a moment to breathe and spend
-time on the stress-free things that I enjoy the most.
+I really do enjoy singing and dancing, and I hope that this revelation
+motivates me to spend more time on the things that I enjoy the most.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 While I intended to dance for about 20 minutes each Friday, I ended up
-doing no dancing at all. This makes sense for me personally since I've
-been feeling physically less motivated to move around since quarantine
+doing no dancing at all. This makes sense for me personally since I
+haven't been feeling particularly driven to move around since quarantine
 began. Similarly, I planned to sing for 45 minutes on Wednesdays and 130
 minutes on Fridays. However, what really happened is I didn't sing at
 all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I
@@ -271,19 +266,20 @@ not originally plan to do.
 As mentioned before, I can compare my time spent on hobbies during
 quarantine to my time spent on hobbies before quarantine. Before
 quarantine, I was spending 7 hours a week singing with my acapella group
-at Amherst. 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also
-spent 4 hours a week dancing with the African Carribean Student Union on
-Campus, 2 hours on Monday, and 2 on Tuesday.
+at Amherst: 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also
+spent 4 hours a week dancing with the African Caribbean Student Union on
+campus: 2 hours on Monday, and 2 on Tuesday.
 
-Evidently, my dancing productivity has gone down 4 hours a week, and my
-singing productivity has gone down by 320 minutes, or 5.33 hours a week.
+Evidently, my dancing productivity has gone down by 4 hours a week, and
+my singing productivity has gone down by 320 minutes, or 5.33 hours a
+week. :(
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
 Answering My Questions of Interest:
 -----------------------------------
 
-What activity do I spend most of my time on, on a weekly basis?
+On a weekly basis, what activity do I spend most of my time on?
 
 -   On a weekly basis, I spend most of my time doing homework. I spend a
     little less time on homework than I intend to.
@@ -292,8 +288,7 @@ When (what weekday) do I accomplish the most homework?
 
 -   I accomplish the most homework on Wednesdays and Saturdays.
 
-How much time do I spend multitasking while doing my homework on a
-weekly basis?
+How much time per week do I spend multitasking while doing my homework?
 
 -   I multitask on homework more than I intend to. While I intend to
     multitask about 22% of the time, I actually end up multitasking
@@ -311,19 +306,21 @@ Reflection
 
 This project has been extremely insightful to looking at how I spend my
 time. With this insight, I think I'm going to continue to use Google
-calendar to budget my time, and to get a better idea of what I can do to
+Calendar to budget my time, and to get a better idea of what I can do to
 adjust my intended schedule in order to influence what I ultimately get
-done in the end.
+done in the end. To be more specific, I'm looking to spend more time on
+my hobbies, especially since summer vacation is coming up soon!
 
 As someone who provides data, I expect that consumer data is being
 collected responsibly in line with laws, regulations, and the
 expectations of those who are having their data collected. I expect that
-my data be treated with care, not used inappropriately, such as being
-sold to skeetchy third-parties. I also expect that my data is used in a
-fair way and only for a purpose related to company activities, and that
-privacy policies are respected and clearly outlined.
+my data be treated with care and not used inappropriately, such as being
+sold to sketchy third-parties. I also expect that my data is used in a
+fair way and only for a purpose related to company activities. Finally,
+I would hope that privacy policies are respected and accurately outlined
+to me.
 
-As people who analyzes others' data, I think statisticians have an
+As people who analyze others' data, I think statisticians have an
 absolute responsibility to uphold the protection and privacy of
 consumers' data. Data handlers must not collect data unneccessarily or
 excessively, sell the data, or indulge in activities that enable or
