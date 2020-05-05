@@ -1,5 +1,5 @@
-Diary of a... WHO?
-==================
+Diary of a Data Science Student: Cabin Fever During Covid-19
+============================================================
 
 ![](./img/cabinfever.png)
 
