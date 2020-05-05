@@ -34,7 +34,7 @@ the end of the two weeks.
 
 -   When (what weekday) do I accomplish the most homework?
 
--   How much time per. week do I spend multitasking while doing my
+-   How much time per week do I spend multitasking while doing my
     homework?
 
 -   How much time per week am I spending on my hobbies now, vs. when I
@@ -115,7 +115,7 @@ schedules.
 <table>
 <thead>
 <tr class="header">
-<th>Table 1: Time Doing Homework by Schedule per. Day</th>
+<th>Table 1: Time Doing Homework by Schedule per Day</th>
 <th></th>
 <th></th>
 </tr>
@@ -175,7 +175,7 @@ I actually spent more time gaming and watching anime than I intended,
 but less time singing, cooking, and dancing than I intended. In fact, I
 didn't get to dance at all!
 
-### Homework and Multi-tasking
+### Homework and Multitasking
 
 Now, let's focus in on homework and multitasking. I decided to do this
 because I had a unique multitaking element to doing homework that I

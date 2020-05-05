@@ -175,7 +175,7 @@ Here are the primary questions of interest that I wanted to answer at the end of
 
 - When (what weekday) do I accomplish the most homework?
 
-- How much time per. week do I spend multitasking while doing my homework?
+- How much time per week do I spend multitasking while doing my homework?
 
 - How much time per week am I spending on my hobbies now, vs. when I was on campus?
 
@@ -204,7 +204,7 @@ Next, my hobbies were sprinkled into my schedule, which I'll take a more in-dept
 ```{r, echo=FALSE, fig.height=6, fig.width=7}
 # the "echo=FALSE" code chunk option suppresses the code from this chunk from appearing in the knit file, but the code will still evaluate and the output will show up in the knit file
 
-ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "Avg. Minutes per. day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight() + theme(axis.title=element_text(size=9))
+ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "Avg. Minutes per day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight() + theme(axis.title=element_text(size=9))
 ```
 
 
@@ -213,7 +213,7 @@ Now on to what I actually accomplished. As far as distributions go, I accomplish
 ```{r, echo = FALSE}
 
 
-ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "Avg. Minutes per. day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()+ theme(axis.title=element_text(size=9))
+ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "Avg. Minutes per day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()+ theme(axis.title=element_text(size=9))
 
 
 ```
@@ -244,7 +244,7 @@ intend_grouped_homework <- intend_grouped_homework %>%
 
 grouped_homework_df <- rbind(real_grouped_homework, intend_grouped_homework)
 
-myPlot <- ggplot(data = grouped_homework_df, aes(x = schedule, y = min_spent_per_day, fill = weekday)) + geom_col() + coord_flip() + labs(y = "Avg. Minutes per. day", title = "Time Spent on Homework per Day") + theme_wsj() + theme(plot.title = element_text(size=13), legend.title = element_text(size=10)) + theme(axis.title=element_text(size=12)) +
+myPlot <- ggplot(data = grouped_homework_df, aes(x = schedule, y = min_spent_per_day, fill = weekday)) + geom_col() + coord_flip() + labs(y = "Avg. Minutes per day", title = "Time Spent on Homework per Day") + theme_wsj() + theme(plot.title = element_text(size=13), legend.title = element_text(size=10)) + theme(axis.title=element_text(size=12)) +
   # gganimate specific bits:
   transition_states(
     weekday,
@@ -263,7 +263,7 @@ grouped_homework_col <- grouped_homework_col%>%
 
 
 
-| Table 1: Time Doing Homework by Schedule per. Day |                       |                           |
+| Table 1: Time Doing Homework by Schedule per Day |                       |                           |
 |---------------------------------------------------|-----------------------|---------------------------|
 | Weekday                                           | Real Avg. Minutes/day | Intended Avg. Minutes/day |
 | Friday                                            | 440                   | 200                       |
@@ -283,7 +283,7 @@ My hobbies were actually sprinkled into my schedule, but lo and behold, I actual
 
 
 
-###Homework and Multi-tasking 
+###Homework and Multitasking 
 
 Now, let's focus in on homework and multitasking. I decided to do this because I had a unique multitaking element to doing homework that I didn't list for any other activity in my schedules. When I was just doing homework, I marked that activity as 'Homework'. But when I did homework at the same time as another activity, I would mark it as 'Homework + (insert activity here)'. In my case, the other activity was always either watching anime or gaming. 
 \newline
@@ -394,7 +394,7 @@ intend_hobbies <- intend_grouped %>%
 hobbies_df <- rbind(real_hobbies, intend_hobbies) 
  
 
-ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per. Day", title = "Time Spent on Hobbies During Quarantine") + theme_economist() 
+ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per Day", title = "Time Spent on Hobbies During Quarantine") + theme_economist() 
 
 #Before Quarentine
 weekday <- c("Sunday", "Monday", "Monday", "Tuesday", "Wednesday")
@@ -413,7 +413,7 @@ Similarly, I planned to sing for 45 minutes on Wednesdays and 130 minutes on Fri
 ```{r, echo = FALSE, fig.width=7, fig.height=6}
 
 #new one
-ggplot(hobbies_df, aes(x = weekday, y = min_spent_pday, fill = weekday)) + geom_segment(aes(x = weekday, xend = weekday, y = 0, yend = min_spent_pday), color = "grey") + geom_point(color = "orange", size = 4)  + facet_wrap(~schedule) + labs(title = "Time Spent on Hobbies During Quarantine", y = "Avg. Minutes per. Day")+ theme(plot.title = element_text(size=2)) + theme_economist() 
+ggplot(hobbies_df, aes(x = weekday, y = min_spent_pday, fill = weekday)) + geom_segment(aes(x = weekday, xend = weekday, y = 0, yend = min_spent_pday), color = "grey") + geom_point(color = "orange", size = 4)  + facet_wrap(~schedule) + labs(title = "Time Spent on Hobbies During Quarantine", y = "Avg. Minutes per Day")+ theme(plot.title = element_text(size=2)) + theme_economist() 
 ```
 
 As mentioned before, I can compare my time spent on hobbies during quarantine to my time spent on hobbies before quarantine. Before quarantine, I was spending 7 hours a week singing with my acapella group at Amherst: 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also spent 4 hours a week dancing with the African Caribbean Student Union on campus: 2 hours on Monday, and 2 on Tuesday. 
@@ -422,7 +422,7 @@ Evidently, my dancing productivity has gone down by 4 hours a week, and my singi
 
 ```{r, echo = FALSE}
 
-ggplot(hobbies_bquarentine, aes(x = activity, y = min_spent_pday, fill = weekday)) + geom_col()  + labs(title = "Time Spent on Hobbies Before Quarantine", y = "Avg. Minutes per. Day") + theme_economist() 
+ggplot(hobbies_bquarentine, aes(x = activity, y = min_spent_pday, fill = weekday)) + geom_col()  + labs(title = "Time Spent on Hobbies Before Quarantine", y = "Avg. Minutes per Day") + theme_economist() 
 
 
 
