@@ -275,7 +275,12 @@ week. :(
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
+Check out these gifs below of me dancing and singing with ACSU Dance and
+the Amherst College DQ!
+
 ![Me dancing with ACSU Dance!](./img/gif.gif)
+
+![Me singing with the DQ!](./img/singgif.gif)
 
 Answering My Questions of Interest:
 -----------------------------------
