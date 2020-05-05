@@ -184,7 +184,7 @@ These questions will also be explored considering the scope of my two schedules 
 
 ## Results
 
-Here's what I found! 
+Here's what I found!!!
 
 ![](./img/window.png)
 
@@ -395,7 +395,6 @@ hobbies_df <- rbind(real_hobbies, intend_hobbies)
  
 
 ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per. Day", title = "Time Spent on Hobbies During Quarantine") + theme_economist() 
-
 
 #Before Quarentine
 weekday <- c("Sunday", "Monday", "Monday", "Tuesday", "Wednesday")
