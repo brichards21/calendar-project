@@ -1,7 +1,4 @@
 theme: jekyll-theme-architect
-baseurl: ""
-url: "https://brichards21.github.io/calendar-project"
 title: Diary of a Data Science Student
 description: Breanna Richards
-header_pages:
-  - index.md
+
