@@ -1,47 +1,50 @@
 Diary of a Data Science Student: Cabin Fever During Covid-19
 ============================================================
 
+Breanna Richards
+----------------
+
 ![](./img/cabinfever.png)
 
 Dear Reader,
 ------------
 
 Most people look forward to Spring Break. But, for Amherst students and
-many college students across the country, the start of Spring Break
-marked a fundamental change in our lives. For those who circumstances
-allowed it, we would be sent home, not for vacation purposes, but to
-ride out the rest of our semesters in quarantine.
+many college students across the country, the start of Spring Break 2020
+marked a fundamental change in our lives. For those whose circumstances
+allowed, we would be sent home to ride out the rest of the semester in
+quarantine.
 
 This diary is dedicated to answering the basic question: "how do I spend
 my time?"
 
 For 14 days straight, I used Google Calendar to schedule my time. I
 primarily used two different calendars, my intended schedule, and my
-real schedule. At the end of each day, I made a schedule of what I
-intended to do the next day, and when I intended to do them. Then, I
-would record what I actually did during the days in a separate, real
-scheudule.
+real schedule. More specifically, at the end of each day, I made a
+schedule of the tasks that I intended to do the next day, and when I
+intended to do them. Then, during the days, I would record what I
+actually did in a separate scheudule.
 
 At the end of this two week period, I collected my data for wrangling
 and analysis.
 
-### Motivation + primary questions of interest
+### Motivation + Primary Questions of Interest
 
 Here are the primary questions of interest that I wanted to answer at
 the end of the two weeks.
 
--   What activity do I spend most of my time on, on a weekly basis?
+-   On a weekly basis, what activity do I spend most of my time on?
 
 -   When (what weekday) do I accomplish the most homework?
 
--   How much time do I spend multitasking while doing my homework on a
-    weekly basis?
+-   How much time per. week do I spend multitasking while doing my
+    homework?
 
 -   How much time per week am I spending on my hobbies now, vs. when I
     was on campus?
 
-These questions will also be explored considering what I intended to do
-versus what I actually accomplished.
+These questions will also be explored considering the scope of my two
+schedules - what I intended to do versus what I actually accomplished.
 
 Results
 -------
