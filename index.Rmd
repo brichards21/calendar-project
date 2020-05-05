@@ -416,7 +416,7 @@ Similarly, I planned to sing for 45 minutes on Wednesdays and 130 minutes on Fri
 ggplot(hobbies_df, aes(x = weekday, y = min_spent_pday, fill = weekday)) + geom_segment(aes(x = weekday, xend = weekday, y = 0, yend = min_spent_pday), color = "grey") + geom_point(color = "orange", size = 4)  + facet_wrap(~schedule) + labs(title = "Time Spent on Hobbies During Quarantine", y = "Avg. Minutes per Day")+ theme(plot.title = element_text(size=2)) + theme_economist() 
 ```
 
-As mentioned before, I can compare my time spent on hobbies during quarantine to my time spent on hobbies before quarantine. Before quarantine, I was spending 7 hours a week singing with my acapella group at Amherst: 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also spent 4 hours a week dancing with the African Caribbean Student Union (ACSU) on campus: 2 hours on Monday, and 2 on Tuesday. 
+As mentioned before, I can compare my time spent on hobbies during quarantine to my time spent on hobbies before quarantine. Before quarantine, I was spending 7 hours a week singing with my acapella group (DQ) at Amherst: 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also spent 4 hours a week dancing with the African Caribbean Student Union (ACSU) on campus: 2 hours on Monday, and 2 on Tuesday. 
 
 Evidently, my dancing productivity has gone down by 4 hours a week, and my singing productivity has gone down by 320 minutes, or 5.33 hours a week. :(
 
