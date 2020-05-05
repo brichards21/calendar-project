@@ -1,8 +1,8 @@
-Diary of a Data Science Student: Cabin Fever During Covid-19
-============================================================
+Cabin Fever During Covid-19
+===========================
 
-Breanna Richards
-----------------
+How Am I Spending My Time?
+--------------------------
 
 ![](./img/cabinfever.png)
 
@@ -53,16 +53,18 @@ Here's what I found!
 
 ![](./img/window.png)
 
-First, I took a look at an overview of the activities that I plotteed in
+First, I took a look at an overview of the activities that I plotted in
 my intended and real calendars, and how much time I alloted for each
 task.
 
 I chose to measure my time in minutes. Note that instead of plotting
 total amount of time spent over the two weeks, I decided to plot average
 time spent on these activities per weekday, so that I could look at what
-I would expect my time distribution to be for a single week (for
+I would expect my time distribution to be for a single week. For
 example, if I spent 120 minutes in total watching anime on Mondays, I
-would only plot 120/2 = 60 minutes for Monday). We can first observe
+would only plot 120/2 = 60 minutes for Monday (Note: since I observed
+collected data for 3 Fridays for starting and ending on a Friday, Friday
+total time would be divided by 3 instead of 2). We can first observe
 what I intended to accomplish.
 
 I can see from the bar chart below that the majority of my week was
@@ -98,6 +100,10 @@ more time on my hobbies.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
+### Homework
+
+![](./img/homework.png)
+
 What's interesting here though, is even though I spent the most time
 doing homework on Wednesdays as I intended, I actually spent the same
 amount of time doing homework on Saturdays as well (480 minutes/ 8 hours
@@ -113,86 +119,60 @@ schedules.
 <table>
 <thead>
 <tr class="header">
-<th align="center">Table 1: Time Doing Homework by Schedule per. Day</th>
-<th></th>
-<th></th>
-<th></th>
+<th>Table 1: Time Doing Homework by Schedule per. Day</th>
 <th></th>
 <th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">Weekday</td>
-<td>Real Avg Minutes/day</td>
-<td>Intended Avg Minutes/day</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Weekday</td>
+<td>Real Avg. Minutes/day</td>
+<td>Intended Avg. Minutes/day</td>
 </tr>
 <tr class="even">
-<td align="center">Friday</td>
+<td>Friday</td>
 <td>440</td>
 <td>200</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
-<td align="center">Monday</td>
+<td>Monday</td>
 <td>270</td>
 <td>405</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="even">
-<td align="center">Saturday</td>
+<td>Saturday</td>
 <td>480</td>
 <td>405</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
-<td align="center">Sunday</td>
+<td>Sunday</td>
 <td>300</td>
 <td>390</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="even">
-<td align="center">Thursday</td>
+<td>Thursday</td>
 <td>180</td>
 <td>435</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="odd">
-<td align="center">Tuesday</td>
+<td>Tuesday</td>
 <td>375</td>
 <td>450</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr class="even">
-<td align="center">Wednesday</td>
+<td>Wednesday</td>
 <td>480</td>
 <td>540</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 
 Coming in second place, as expected, is class time. Evidently, I spent
-on average, 647.5 minutes or 10.8 hours in class per week. That is about
-1.5 hours more than what I intended. Note that I also counted office
-hours as 'class time', so that would probably explain this difference.
+on average, 647.5 minutes or 10.8 hours, in class per week. That is
+about 1.5 hours more than what I intended. Note that I also counted
+office hours as 'class time', so that would probably explain this
+difference.
 
 My hobbies were actually sprinkled into my schedule, but lo and behold,
 I actually spent more time gaming and watching anime than I intended,
@@ -253,6 +233,8 @@ clearly.
 </table>
 
 ### Hobbies
+
+![](./img/hobbies.jpeg)
 
 Finally, we move on to my hobbies. In addition to plotting how much time
 I intended to spend/actually did spend on my hobbies, I also plotted how
