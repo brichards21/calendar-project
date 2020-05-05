@@ -266,14 +266,16 @@ As mentioned before, I can compare my time spent on hobbies during
 quarantine to my time spent on hobbies before quarantine. Before
 quarantine, I was spending 7 hours a week singing with my acapella group
 at Amherst: 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also
-spent 4 hours a week dancing with the African Caribbean Student Union on
-campus: 2 hours on Monday, and 2 on Tuesday.
+spent 4 hours a week dancing with the African Caribbean Student Union
+(ACSU) on campus: 2 hours on Monday, and 2 on Tuesday.
 
 Evidently, my dancing productivity has gone down by 4 hours a week, and
 my singing productivity has gone down by 320 minutes, or 5.33 hours a
 week. :(
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
+![Me dancing with ACSU Dance!](./img/gif.gif)
 
 Answering My Questions of Interest:
 -----------------------------------
