@@ -1,6 +1,6 @@
 ---
 output: md_document
-always_allow_html: no
+always_allow_html: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -150,11 +150,11 @@ real_grouped <- real %>%
 
 
 
-## Diary of a... WHO?
+# Diary of a... WHO?
 
 
 
-![totally real and not-fake diary cover](./img/cabinfever.png)
+![](./img/cabinfever.png)
 
 ## Dear Reader,
 Most people look forward to Spring Break. But, for Amherst students and many college students across the country, the start of Spring Break marked a fundamental change in our lives. 
@@ -182,11 +182,11 @@ Here are the primary questions of interest that I wanted to answer at the end of
 These questions will also be explored considering what I intended to do versus what I actually accomplished. 
 
 
-# Results
+## Results
 
 Here's what I found! 
 
-![me looking out my window in quarantine](./img/window.png)
+![](./img/window.png)
 
 First, I took a look at an overview of the activities that I plotteed in my intended and real calendars, and how much time I alloted for each task. 
 
@@ -199,18 +199,31 @@ I can see from the bar chart below that the majority of my week was planned to b
 Coming in at second place is class time. I intended to spend 557.5 minutes per week in class, which is about 9.3 hours. That's pretty much in line with how often/how long my classes are collectively scheduled to be.  
 \newline
 Next, my hobbies were sprinkled into my schedule, which I'll take a more in-depth look at later in the report. Just from a glance, it seems that I intended to spend about the same amount of time watching anime, cooking, gaming, and singing per week. I have some scheduled dancing time sprinkled in there as well. 
-```{r, echo=FALSE}
+
+
+```{r, echo=FALSE, fig.height=6, fig.width=7}
 # the "echo=FALSE" code chunk option suppresses the code from this chunk from appearing in the knit file, but the code will still evaluate and the output will show up in the knit file
 
 ggplot(data = intend_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + labs(y = "minutes per day", title = "Intended Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight() + theme(axis.title=element_text(size=9))
 ```
 
-Now on to what I actually accomplished. As far as distributions go, I accomplished more or less what I intended to do, with some variation. 
 
-Homework still clocks in as the activity that takes up most of my time on a weekly basis. However, it seems that I spent less time than I intended to doing homework. I really spent an average of 2,525 minutes, 42.08 hours, per week doing homework. Even if it's just a 5 hour difference, I learned that my school work took me less time than I thought it would take me. 42.08 hours a week is already enough time dedicated to sitting in my chair and typing/writing away at my assignments, so I'm glad that I may have gotten the opportunity to spend more time on my hobbies. What's interesting here though, is even though I spent the most time doing homework on Wednesdays as I intended, I actually spent the same amount of time doing homework on Saturdays as well (480 minutes/ 8 hours each). Furthermore, as I expected to do the least amount of homework on Fridays, I actually did almost the same amount of homework on Fridays as I did on Wednesdays and Saturdays. I actually did the least amount of homework on Thursdays. 
+Now on to what I actually accomplished. As far as distributions go, I accomplished more or less what I intended to do, with some variation. Homework still clocks in as the activity that takes up most of my time on a weekly basis. However, it seems that I spent less time than I intended to doing homework. I really spent an average of 2,525 minutes, 42.08 hours, per week doing homework. Even if it's just a 5 hour difference, I learned that my school work took me less time than I thought it would take me. 42.08 hours a week is already enough time dedicated to sitting in my chair and typing/writing away at my assignments, so I'm glad that I may have gotten the opportunity to spend more time on my hobbies.
+
+```{r, echo = FALSE}
+
+
+ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "minutes per day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()
+
+
+```
+
+What's interesting here though, is even though I spent the most time doing homework on Wednesdays as I intended, I actually spent the same amount of time doing homework on Saturdays as well (480 minutes/ 8 hours each). Furthermore, as I expected to do the least amount of homework on Fridays, I actually did almost the same amount of homework on Fridays as I did on Wednesdays and Saturdays. I actually did the least amount of homework on Thursdays. 
 \newline
 The animated bar chart and table below look at homework more closely, and highlight the differences between my two schedules.
-```{r, echo=FALSE, fig.height=4, fig.width=4, cache=TRUE}
+
+
+```{r, echo=FALSE, fig.height=7, fig.width=8, cache=TRUE}
 
 real_grouped_homework <- real_grouped %>%
   filter(activity == "Homework") 
@@ -246,32 +259,26 @@ grouped_homework_col <- grouped_homework_col%>%
 ```
 
 
-```{r, echo = FALSE}
 
-kable(grouped_homework_col, 
-      col.names = c("Weekday", "Real Avg Minutes/day", "Intended Avg Minutes/day"), booktabs = TRUE, escape = FALSE, align = "c", "latex", caption = "Time Doing Homework by Schedule per. Day") %>%
-kable_styling(latex_options = "hold_position")
-```
-
+| Table 1: Time Doing Homework by Schedule per. Day |                      |                          |   |   |   |
+|:-------------------------------------------------:|----------------------|--------------------------|---|---|---|
+| Weekday                                           | Real Avg Minutes/day | Intended Avg Minutes/day |   |   |   |
+| Friday                                            | 440                  | 200                      |   |   |   |
+| Monday                                            | 270                  | 405                      |   |   |   |
+| Saturday                                          | 480                  | 405                      |   |   |   |
+| Sunday                                            | 300                  | 390                      |   |   |   |
+| Thursday                                          | 180                  | 435                      |   |   |   |
+| Tuesday                                           | 375                  | 450                      |   |   |   |
+| Wednesday                                         | 480                  | 540                      |   |   |   |
 
 Coming in second place, as expected, is class time. Evidently, I spent on average, 647.5 minutes or 10.8 hours in class per week. That is about 1.5 hours more than what I intended. Note that I also counted office hours as 'class time', so that would probably explain this difference.
 \newline
 
 My hobbies were actually sprinkled into my schedule, but lo and behold, I actually spent more time gaming and watching anime than I intended, but less time singing, cooking, and dancing than I intended. In fact, I didn't get to dance at all!
 
-```{r, echo = FALSE}
 
 
-ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col()+ labs(y = "minutes per day", title = "Real Time Spent on Activities per day") + theme_bw() + theme(axis.text.x = element_text(angle = -85)) + theme_fivethirtyeight()
-
-
-
-
-
-
-```
-
-##Homework and Multi-tasking 
+###Homework and Multi-tasking 
 
 Now, let's focus in on homework and multitasking. I decided to do this, because I had a unique multitaking element to doing homework, that I didn't list for any other activity in my schedules. When I was just doing homework, I marked that activity as 'Homework'. But when I did homework at the same time as another activity, I would mark it as 'Homework + (insert activity here)'. In my case, the other activity was always either watching anime or gaming. 
 \newline
@@ -344,17 +351,17 @@ homework_df_show <- homework_df_show %>%
 
 setattr(homework_df_show, "row.names", c("No Multitasking", "Multitasking"))
 
-#show table
-
-kable(homework_df_show, col.names = c("Real Proportion", "Intended Proportion"),  caption = "Doing Homework with and w/o Multitasking", booktabs = TRUE, escape = FALSE, align = "c", "latex") %>%
-kable_styling(latex_options = "hold_position")
-
-
-
 
 ```
 
-#Hobbies
+
+| Table 2: Doing Homework with and w/o Multitasking |                 |                     |
+|---------------------------------------------------|-----------------|---------------------|
+|                                                   | Real Proportion | Intended Proportion |
+| No Multitasking                                   | 0.6229508       | 0.7794872           |
+| Multitasking                                      | 0.3770492       | 0.2205128           |
+
+###Hobbies
 
 Finally, we move on to my hobbies. In addition to plotting how much time I intended to spend/actually did spend on my hobbies, I also plotted how much time I used to spend on my hobbies when I was on campus for comparison purposes. 
 \newline
@@ -363,17 +370,13 @@ Even though I didn't use a calendar when on campus, I was able to record this da
 I decided to only focus on Dancing and Singing, since they were the hobbies I engaged the most in when I was at school.
 
 We can tell from the bar chart below that while I intended to allocate more time for singing and dancing per week, overall, I actually spent a lot less time engaging in those activities.
-\newline
 
-While I intended to dance for about 20 minutes each Friday, I ended up doing no dancing at all. This makes sense for me personally since I've been feeling physically less motivated to move around since quarantine began. 
-\newline
-Similarly, I planned to sing for 45 minutes on Wednesdays and 130 minutes on Fridays. However, what really happened is I didn't sing at all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I also indulged in singing on Thursdays for about 45 minutes, which I did not originally plan to do.
 \newline
 I really do enjoy singing and dancing, and I hope that seeing the data right in front of me motivates me to take a moment to breathe and spend time on the stress-free things that I enjoy the most. 
 \newline
 
 
-```{r, echo=FALSE, fig.width=4, fig.height=4}
+```{r, echo=FALSE, fig.width=7, fig.height=6}
 real_hobbies <- real_grouped%>%
   filter(activity == "Dancing" | activity == "Singing") %>%
   mutate(schedule = "Real")
@@ -385,8 +388,8 @@ intend_hobbies <- intend_grouped %>%
 hobbies_df <- rbind(real_hobbies, intend_hobbies) 
  
 
-ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per. Day", title = "Time Spent on Hobbies After Quarantine") + theme_economist() 
-hobbies_df
+ggplot(hobbies_df, aes(x = activity, y = min_spent_per_day, fill = weekday)) + geom_col() + facet_wrap(~ schedule) + theme_bw() + labs(y = "Avg. Minutes per. Day", title = "Time Spent on Hobbies During Quarantine") + theme_economist() 
+
 
 #Before Quarentine
 weekday <- c("Sunday", "Monday", "Monday", "Tuesday", "Wednesday")
@@ -397,15 +400,22 @@ hobbies_bquarentine <- data.frame(weekday, activity, min_spent_pday)
 
 ```
 
+While I intended to dance for about 20 minutes each Friday, I ended up doing no dancing at all. This makes sense for me personally since I've been feeling physically less motivated to move around since quarantine began. 
+\newline
+Similarly, I planned to sing for 45 minutes on Wednesdays and 130 minutes on Fridays. However, what really happened is I didn't sing at all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I also indulged in singing on Thursdays for about 45 minutes, which I did not originally plan to do.
+
+
+```{r, echo = FALSE, fig.width=7, fig.height=6}
+
+#new one
+ggplot(hobbies_df, aes(x = weekday, y = min_spent_pday, fill = weekday)) + geom_segment(aes(x = weekday, xend = weekday, y = 0, yend = min_spent_pday), color = "grey") + geom_point(color = "orange", size = 4)  + facet_wrap(~schedule) + labs(title = "Time Spent on Hobbies During Quarantine", y = "Avg. Minutes per. Day")+ theme(plot.title = element_text(size=2)) + theme_economist() 
+```
+
 As mentioned before, I can compare my time spent on hobbies during quarantine to my time spent on hobbies before quarantine. Before quarantine, I was spending 7 hours a week singing with my acapella group at Amherst. 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also spent 4 hours a week dancing with the African Carribean Student Union on Campus, 2 hours on Monday, and 2 on Tuesday. 
 
 Evidently, my dancing productivity has gone down 4 hours a week, and my singing productivity has gone down by 320 minutes, or 5.33 hours a week. 
 
-
 ```{r, echo = FALSE}
-
-#new one
-ggplot(hobbies_df, aes(x = weekday, y = min_spent_pday, fill = weekday)) + geom_segment(aes(x = weekday, xend = weekday, y = 0, yend = min_spent_pday), color = "grey") + geom_point(color = "orange", size = 4)  + facet_wrap(~schedule) + labs(title = "Time Spent on Hobbies Before Quarantine", y = "Avg. Minutes per. Day")+ theme(plot.title = element_text(size=2)) + theme_economist() 
 
 ggplot(hobbies_bquarentine, aes(x = activity, y = min_spent_pday, fill = weekday)) + geom_col()  + labs(title = "Time Spent on Hobbies Before Quarantine", y = "Avg. Minutes per. Day") + theme_economist() 
 
@@ -437,10 +447,11 @@ How much time per week am I spending on my hobbies now, vs. when I was on campus
 
 
 
-#Reflection
+##Reflection
 
 This project has been extremely insightful to looking at how I spend my time. With this insight, I think I'm going to continue to use Google calendar to budget my time, and to get a better idea of what I can do to adjust my intended schedule in order to influence what I ultimately get done in the end. 
 
 As someone who provides data, I expect that consumer data is being collected responsibly in line with laws, regulations, and the expectations of those who are having their data collected. I expect that my data be treated with care, not used inappropriately, such as being sold to skeetchy third-parties. I also expect that my data is used in a fair way and only for a purpose related to company activities, and that privacy policies are respected and clearly outlined.
 
 As people who analyzes others' data, I think statisticians have an absolute responsibility to uphold the protection and privacy of consumers' data. Data handlers must not collect data unneccessarily or excessively, sell the data, or indulge in activities that enable or facilitate illegitimate or unauthorized access to data. One of the biggest things that a data collector must master is communication. All data collectors must inform consumers about data breach possibilities and about what data are stored. Transparency is key for a respectable relationship between consumer and statistician/data collector. 
+

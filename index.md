@@ -1,7 +1,7 @@
 Diary of a... WHO?
-------------------
+==================
 
-![totally real and not-fake diary cover](./img/cabinfever.png)
+![](./img/cabinfever.png)
 
 Dear Reader,
 ------------
@@ -44,11 +44,11 @@ These questions will also be explored considering what I intended to do
 versus what I actually accomplished.
 
 Results
-=======
+-------
 
 Here's what I found!
 
-![me looking out my window in quarantine](./img/window.png)
+![](./img/window.png)
 
 First, I took a look at an overview of the activities that I plotteed in
 my intended and real calendars, and how much time I alloted for each
@@ -78,11 +78,11 @@ in-depth look at later in the report. Just from a glance, it seems that
 I intended to spend about the same amount of time watching anime,
 cooking, gaming, and singing per week. I have some scheduled dancing
 time sprinkled in there as well.
+
 ![](index_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 Now on to what I actually accomplished. As far as distributions go, I
 accomplished more or less what I intended to do, with some variation.
-
 Homework still clocks in as the activity that takes up most of my time
 on a weekly basis. However, it seems that I spent less time than I
 intended to doing homework. I really spent an average of 2,525 minutes,
@@ -91,16 +91,100 @@ difference, I learned that my school work took me less time than I
 thought it would take me. 42.08 hours a week is already enough time
 dedicated to sitting in my chair and typing/writing away at my
 assignments, so I'm glad that I may have gotten the opportunity to spend
-more time on my hobbies. What's interesting here though, is even though
-I spent the most time doing homework on Wednesdays as I intended, I
-actually spent the same amount of time doing homework on Saturdays as
-well (480 minutes/ 8 hours each). Furthermore, as I expected to do the
-least amount of homework on Fridays, I actually did almost the same
-amount of homework on Fridays as I did on Wednesdays and Saturdays. I
-actually did the least amount of homework on Thursdays. The animated bar
-chart and table below look at homework more closely, and highlight the
-differences between my two schedules.
-![](index_files/figure-markdown_strict/unnamed-chunk-4-1.gif)
+more time on my hobbies.
+
+![](index_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+
+What's interesting here though, is even though I spent the most time
+doing homework on Wednesdays as I intended, I actually spent the same
+amount of time doing homework on Saturdays as well (480 minutes/ 8 hours
+each). Furthermore, as I expected to do the least amount of homework on
+Fridays, I actually did almost the same amount of homework on Fridays as
+I did on Wednesdays and Saturdays. I actually did the least amount of
+homework on Thursdays. The animated bar chart and table below look at
+homework more closely, and highlight the differences between my two
+schedules.
+
+![](index_files/figure-markdown_strict/unnamed-chunk-5-1.gif)
+
+<table>
+<thead>
+<tr class="header">
+<th align="center">Table 1: Time Doing Homework by Schedule per. Day</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Weekday</td>
+<td>Real Avg Minutes/day</td>
+<td>Intended Avg Minutes/day</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center">Friday</td>
+<td>440</td>
+<td>200</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center">Monday</td>
+<td>270</td>
+<td>405</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center">Saturday</td>
+<td>480</td>
+<td>405</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center">Sunday</td>
+<td>300</td>
+<td>390</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center">Thursday</td>
+<td>180</td>
+<td>435</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td align="center">Tuesday</td>
+<td>375</td>
+<td>450</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td align="center">Wednesday</td>
+<td>480</td>
+<td>540</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 Coming in second place, as expected, is class time. Evidently, I spent
 on average, 647.5 minutes or 10.8 hours in class per week. That is about
@@ -112,10 +196,7 @@ I actually spent more time gaming and watching anime than I intended,
 but less time singing, cooking, and dancing than I intended. In fact, I
 didn't get to dance at all!
 
-![](index_files/figure-markdown_strict/unnamed-chunk-6-1.png)
-
-Homework and Multi-tasking
---------------------------
+### Homework and Multi-tasking
 
 Now, let's focus in on homework and multitasking. I decided to do this,
 because I had a unique multitaking element to doing homework, that I
@@ -139,10 +220,36 @@ when I have one of my favorite shows playing as my
 'homework-soundtrack'. The barchart and table below show my results more
 clearly.
 
-![](index_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
-Hobbies
-=======
+<table>
+<thead>
+<tr class="header">
+<th>Table 2: Doing Homework with and w/o Multitasking</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Real Proportion</td>
+<td>Intended Proportion</td>
+</tr>
+<tr class="even">
+<td>No Multitasking</td>
+<td>0.6229508</td>
+<td>0.7794872</td>
+</tr>
+<tr class="odd">
+<td>Multitasking</td>
+<td>0.3770492</td>
+<td>0.2205128</td>
+</tr>
+</tbody>
+</table>
+
+### Hobbies
 
 Finally, we move on to my hobbies. In addition to plotting how much time
 I intended to spend/actually did spend on my hobbies, I also plotted how
@@ -159,6 +266,12 @@ We can tell from the bar chart below that while I intended to allocate
 more time for singing and dancing per week, overall, I actually spent a
 lot less time engaging in those activities.
 
+I really do enjoy singing and dancing, and I hope that seeing the data
+right in front of me motivates me to take a moment to breathe and spend
+time on the stress-free things that I enjoy the most.
+
+![](index_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+
 While I intended to dance for about 20 minutes each Friday, I ended up
 doing no dancing at all. This makes sense for me personally since I've
 been feeling physically less motivated to move around since quarantine
@@ -166,22 +279,9 @@ began. Similarly, I planned to sing for 45 minutes on Wednesdays and 130
 minutes on Fridays. However, what really happened is I didn't sing at
 all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I
 also indulged in singing on Thursdays for about 45 minutes, which I did
-not originally plan to do. I really do enjoy singing and dancing, and I
-hope that seeing the data right in front of me motivates me to take a
-moment to breathe and spend time on the stress-free things that I enjoy
-the most.
+not originally plan to do.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-9-1.png)
-
-    ## # A tibble: 5 x 5
-    ## # Groups:   weekday [3]
-    ##   weekday   activity total_min min_spent_per_day schedule
-    ##   <chr>     <chr>        <dbl>             <dbl> <chr>   
-    ## 1 Friday    Singing        165                55 Real    
-    ## 2 Thursday  Singing         90                45 Real    
-    ## 3 Friday    Dancing         60                20 Intended
-    ## 4 Friday    Singing        390               130 Intended
-    ## 5 Wednesday Singing         90                45 Intended
 
 As mentioned before, I can compare my time spent on hobbies during
 quarantine to my time spent on hobbies before quarantine. Before
@@ -193,7 +293,7 @@ Campus, 2 hours on Monday, and 2 on Tuesday.
 Evidently, my dancing productivity has gone down 4 hours a week, and my
 singing productivity has gone down by 320 minutes, or 5.33 hours a week.
 
-![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)![](index_files/figure-markdown_strict/unnamed-chunk-10-2.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
 Answering My Questions of Interest:
 -----------------------------------
@@ -222,7 +322,7 @@ on campus?
     minutes per week on hobbies, 560 more than I'm spending now.
 
 Reflection
-==========
+----------
 
 This project has been extremely insightful to looking at how I spend my
 time. With this insight, I think I'm going to continue to use Google
