@@ -79,18 +79,6 @@ in-depth look at later in the report. Just from a glance, it seems that
 I intended to spend about the same amount of time watching anime,
 cooking, gaming, and singing per week. I have some scheduled dancing
 time sprinkled in there as well.
-
-    ## [1] 90
-
-    ## # A tibble: 2 x 4
-    ## # Groups:   weekday [2]
-    ##   weekday  activity total_min min_spent_per_day
-    ##   <chr>    <chr>        <dbl>             <dbl>
-    ## 1 Saturday Cooking        120                60
-    ## 2 Tuesday  Cooking         60                30
-
-    ## [1] 190
-
 ![](index_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
 Now on to what I actually accomplished. As far as distributions go, I
@@ -135,15 +123,100 @@ because I had a unique multitaking element to doing homework, that I
 didn't list for any other activity in my schedules. When I was just
 doing homework, I marked that activity as 'Homework'. But when I did
 homework at the same time as another activity, I would mark it as
-'Homework + \[insert activity here\]'. In my case, the other activity
-was always either watching anime or gaming.
+'Homework + (insert activity here)'. In my case, the other activity was
+always either watching anime or gaming.
+
+The bar chart below gives me insight into the proportion of homework
+that I multitasked while doing, faceted by what I intended to do and
+what I actually did. It looks like I intended to multitask on less of a
+proportion of my homework than I actually did. More specifically, I
+intended to multitask 22% of the time I was doing my homework, but
+actually multitasked 37.7% of the time. Being that I spent less time on
+homework than I intended to, it may be safe to say that multitasking did
+not make me spend more time on my homework. In fact, maybe having
+something in the background, like a show or game, kept me focused. I
+noticed in the past that I tend to do really well with studying and work
+when I have one of my favorite shows playing as my
+'homework-soundtrack'. The barchart and table below show my results more
+clearly.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 Hobbies
 =======
 
-![](index_files/figure-markdown_strict/unnamed-chunk-9-1.png)![](index_files/figure-markdown_strict/unnamed-chunk-9-2.png)
+Finally, we move on to my hobbies. In addition to plotting how much time
+I intended to spend/actually did spend on my hobbies, I also plotted how
+much time I used to spend on my hobbies when I was on campus for
+comparison purposes. Even though I didn't use a calendar when on campus,
+I was able to record this data because my hobbies were fine tuned to a
+set schedule every week at Amherst because I did them in clubs! I was
+able to plot the time that I spent based on when and for how long my
+recreational clubs would meet each week. I decided to only focus on
+Dancing and Singing, since they were the hobbies I engaged the most in
+when I was at school.
+
+We can tell from the bar chart below that while I intended to allocate
+more time for singing and dancing per week, overall, I actually spent a
+lot less time engaging in those activities.
+
+While I intended to dance for about 20 minutes each Friday, I ended up
+doing no dancing at all. This makes sense for me personally since I've
+been feeling physically less motivated to move around since quarantine
+began. Similarly, I planned to sing for 45 minutes on Wednesdays and 130
+minutes on Fridays. However, what really happened is I didn't sing at
+all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I
+also indulged in singing on Thursdays for about 45 minutes, which I did
+not originally plan to do. I really do enjoy singing and dancing, and I
+hope that seeing the data right in front of me motivates me to take a
+moment to breathe and spend time on the stress-free things that I enjoy
+the most.
+
+![](index_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+
+    ## # A tibble: 5 x 5
+    ## # Groups:   weekday [3]
+    ##   weekday   activity total_min min_spent_per_day schedule
+    ##   <chr>     <chr>        <dbl>             <dbl> <chr>   
+    ## 1 Friday    Singing        165                55 Real    
+    ## 2 Thursday  Singing         90                45 Real    
+    ## 3 Friday    Dancing         60                20 Intended
+    ## 4 Friday    Singing        390               130 Intended
+    ## 5 Wednesday Singing         90                45 Intended
+
+As mentioned before, I can compare my time spent on hobbies during
+quarantine to my time spent on hobbies before quarantine. Before
+quarantine, I was spending 7 hours a week singing with my acapella group
+at Amherst. 3 hours on Sunday, 2 on Monday, and 2 on Wednesday. I also
+spent 4 hours a week dancing with the African Carribean Student Union on
+Campus, 2 hours on Monday, and 2 on Tuesday.
+
+Evidently, my dancing productivity has gone down 4 hours a week, and my
+singing productivity has gone down by 320 minutes, or 5.33 hours a week.
+![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)![](index_files/figure-markdown_strict/unnamed-chunk-10-2.png)
+
+Answering My Questions of Interest:
+-----------------------------------
+
+What activity do I spend most of my time on, on a weekly basis? - On a
+weekly basis, I spend most of my time doing homework. I spend a little
+less time on homework than I intend to.
+
+When (what weekday) do I accomplish the most homework? - I accomplish
+the most homework on Wednesdays and Saturdays.
+
+How much time do I spend multitasking while doing my homework on a
+weekly basis? - I multitask on homework more than I intend to. While I
+intend to multitask about 22% of the time, I actually end up
+multitasking 37.7% of the time.
+
+How much time per week am I spending on my hobbies now, vs. when I was
+on campus? - In total, I'm spending 100 minutes a week on hobbies,
+although I intend to spend 195 minutes a week. Before quarentine, I
+spent 660 minutes per week on hobbies, 560 more than I'm spending now.
 
 Reflection
 ==========
+
+This project has been extremely insightful to looking at how I spend my
+time.
