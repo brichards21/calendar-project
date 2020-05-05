@@ -164,7 +164,7 @@ For those whose circumstances allowed, we would be sent home to ride out the res
 This diary is dedicated to answering the basic question: "how do I spend my time?"
 
 For 14 days straight, I used Google Calendar to schedule my time. I primarily used two different calendars, my intended schedule, and my real schedule. More specifically, at the end of each day, I made a schedule of the tasks that I intended to do the next day, and when I intended to do them. 
-Then, during the days, I would record what I actually did in a separate scheudule. 
+Then, during the days, I would record what I actually did in a separate schedule. 
 
 At the end of this two week period, I collected my data for wrangling and analysis.
 
@@ -276,7 +276,7 @@ grouped_homework_col <- grouped_homework_col%>%
 
 
 
-Coming in second place, as expected, is class time. Evidently, I spent on average, 647.5 minutes or 10.8 hours, in class per week. That is about 1.5 hours more than what I intended. Note that I also counted office hours as 'class time', so that would probably explain this difference.
+Coming in second place, as expected, is class time. Evidently, I spent on average 647.5 minutes or 10.8 hours, in class per week. That is about 1.5 hours more than what I intended. Note that I also counted office hours as 'class time', so that would probably explain this difference.
 \newline
 
 My hobbies were actually sprinkled into my schedule, but lo and behold, I actually spent more time gaming and watching anime than I intended, but less time singing, cooking, and dancing than I intended. In fact, I didn't get to dance at all!
@@ -285,7 +285,7 @@ My hobbies were actually sprinkled into my schedule, but lo and behold, I actual
 
 ###Homework and Multitasking 
 
-Now, let's focus in on homework and multitasking. I decided to do this because I had a unique multitaking element to doing homework that I didn't list for any other activity in my schedules. When I was just doing homework, I marked that activity as 'Homework'. But when I did homework at the same time as another activity, I would mark it as 'Homework + (insert activity here)'. In my case, the other activity was always either watching anime or gaming. 
+Now, let's focus on homework and multitasking. I decided to do this because I had a unique multitasking element to doing homework that I didn't list for any other activity in my schedules. When I was just doing homework, I marked that activity as 'Homework'. But when I did homework at the same time as another activity, I would mark it as 'Homework + (insert activity here)'. In my case, the other activity was always either watching anime or gaming. 
 \newline
 
 The bar chart below gives me insight into the proportion of homework that I did while multitasking (or not), faceted by what I intended to do and what I actually did. 
@@ -293,7 +293,7 @@ The bar chart below gives me insight into the proportion of homework that I did 
 It looks like I intended to multitask on less of a proportion of my homework than I actually did. More specifically, I intended to multitask 22% of the time I was doing my homework, but actually multitasked 37.7% of the time. 
 \newline
 Being that I spent less time on homework than I intended to overall, it may be safe to say that multitasking did not make me spend more time on my homework. In fact, maybe having something in the background, like a show or game, kept me focused. I noticed in the past that I tend to do really well with studying and work when I have one of my favorite shows playing as my 'homework-soundtrack'.
-The barchart and table below show my results more clearly. 
+The bar chart and table below show my results more clearly. 
 
 ```{r, echo=FALSE, message = FALSE}
 
@@ -448,7 +448,7 @@ How much time per week do I spend multitasking while doing my homework?
 How much time per week am I spending on my hobbies now, vs. when I was on campus?
 \newline
 
-- In total, I'm spending 100 minutes a week on hobbies, although I intend to spend 195 minutes a week. Before quarentine, I spent 660 minutes per week on hobbies, 560 more than I'm spending now.
+- In total, I'm spending 100 minutes a week on hobbies, although I intend to spend 195 minutes a week. Before quarantine, I spent 660 minutes per week on hobbies, 560 more than I'm spending now.
 
 
 
@@ -458,5 +458,5 @@ This project has been extremely insightful to looking at how I spend my time. Wi
 
 As someone who provides data, I expect that consumer data is being collected responsibly in line with laws, regulations, and the expectations of those who are having their data collected. I expect that my data be treated with care and not used inappropriately, such as being sold to sketchy third-parties. I also expect that my data is used in a fair way and only for a purpose related to company activities. Finally, I would hope that privacy policies are respected and accurately outlined to me.
 
-As people who analyze others' data, I think statisticians have an absolute responsibility to uphold the protection and privacy of consumers' data. Data handlers must not collect data unneccessarily or excessively, sell the data, or indulge in activities that enable or facilitate illegitimate or unauthorized access to data. One of the biggest things that a data collector must master is communication. All data collectors must inform consumers about data breach possibilities and about what data are stored. Transparency is key for a respectable relationship between consumer and statistician/data collector. 
+As people who analyze others' data, I think statisticians have an absolute responsibility to uphold the protection and privacy of consumers' data. Data handlers must not collect data unnecessarily or excessively, sell the data, or indulge in activities that enable or facilitate illegitimate or unauthorized access to data. One of the biggest things that a data collector must master is communication. All data collectors must inform consumers about data breach possibilities and about what data are stored. Transparency is key for a respectable relationship between consumer and statistician/data collector. 
 

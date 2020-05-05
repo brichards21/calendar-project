@@ -20,7 +20,7 @@ primarily used two different calendars, my intended schedule, and my
 real schedule. More specifically, at the end of each day, I made a
 schedule of the tasks that I intended to do the next day, and when I
 intended to do them. Then, during the days, I would record what I
-actually did in a separate scheudule.
+actually did in a separate schedule.
 
 At the end of this two week period, I collected my data for wrangling
 and analysis.
@@ -165,10 +165,9 @@ schedules.
 </table>
 
 Coming in second place, as expected, is class time. Evidently, I spent
-on average, 647.5 minutes or 10.8 hours, in class per week. That is
-about 1.5 hours more than what I intended. Note that I also counted
-office hours as 'class time', so that would probably explain this
-difference.
+on average 647.5 minutes or 10.8 hours, in class per week. That is about
+1.5 hours more than what I intended. Note that I also counted office
+hours as 'class time', so that would probably explain this difference.
 
 My hobbies were actually sprinkled into my schedule, but lo and behold,
 I actually spent more time gaming and watching anime than I intended,
@@ -177,8 +176,8 @@ didn't get to dance at all!
 
 ### Homework and Multitasking
 
-Now, let's focus in on homework and multitasking. I decided to do this
-because I had a unique multitaking element to doing homework that I
+Now, let's focus on homework and multitasking. I decided to do this
+because I had a unique multitasking element to doing homework that I
 didn't list for any other activity in my schedules. When I was just
 doing homework, I marked that activity as 'Homework'. But when I did
 homework at the same time as another activity, I would mark it as
@@ -196,8 +195,8 @@ multitasking did not make me spend more time on my homework. In fact,
 maybe having something in the background, like a show or game, kept me
 focused. I noticed in the past that I tend to do really well with
 studying and work when I have one of my favorite shows playing as my
-'homework-soundtrack'. The barchart and table below show my results more
-clearly.
+'homework-soundtrack'. The bar chart and table below show my results
+more clearly.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
@@ -298,7 +297,7 @@ How much time per week am I spending on my hobbies now, vs. when I was
 on campus?
 
 -   In total, I'm spending 100 minutes a week on hobbies, although I
-    intend to spend 195 minutes a week. Before quarentine, I spent 660
+    intend to spend 195 minutes a week. Before quarantine, I spent 660
     minutes per week on hobbies, 560 more than I'm spending now.
 
 Reflection
@@ -322,7 +321,7 @@ to me.
 
 As people who analyze others' data, I think statisticians have an
 absolute responsibility to uphold the protection and privacy of
-consumers' data. Data handlers must not collect data unneccessarily or
+consumers' data. Data handlers must not collect data unnecessarily or
 excessively, sell the data, or indulge in activities that enable or
 facilitate illegitimate or unauthorized access to data. One of the
 biggest things that a data collector must master is communication. All
