@@ -15,15 +15,15 @@ quarantine.
 This diary is dedicated to answering the basic question: "how do I spend
 my time?"
 
-For 14 days straight, I used Google Calendar to schedule my time. I
+For 15 days straight, I used Google Calendar to schedule my time. I
 primarily used two different calendars, my intended schedule, and my
 real schedule. More specifically, at the end of each day, I made a
 schedule of the tasks that I intended to do the next day, and when I
 intended to do them. Then, during the days, I would record what I
 actually did in a separate schedule.
 
-At the end of this two week period, I collected my data for wrangling
-and analysis.
+At the end of this approximately two week period, I collected my data
+for wrangling and analysis.
 
 ### Motivation + Primary Questions of Interest
 
