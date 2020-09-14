@@ -25,9 +25,10 @@ actually did in a separate schedule.
 At the end of this approximately two week period, I collected my data
 for wrangling and analysis.
 
-\#\#\#Motivation + Primary Questions of Interest Here are the primary
-questions of interest that I wanted to answer at the end of the two
-weeks.
+### Motivation + Primary Questions of Interest
+
+Here are the primary questions of interest that I wanted to answer at
+the end of the two weeks.
 
 -   On a weekly basis, what activity do I spend most of my time on?
 
@@ -95,7 +96,9 @@ more time on my hobbies.
 
 ![](index_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
-\#\#\#Homework ![](./img/homework.png)
+### Homework
+
+![](./img/homework.png)
 
 What’s interesting here though, is even though I spent the most time
 doing homework on Wednesdays as I intended, I actually spent the same
@@ -171,7 +174,7 @@ I actually spent more time gaming and watching anime than I intended,
 but less time singing, cooking, and dancing than I intended. In fact, I
 didn’t get to dance at all!
 
-\#\#\#Homework and Multitasking
+### Homework and Multitasking
 
 Now, let’s focus on homework and multitasking. I decided to do this
 because I had a unique multitasking element to doing homework that I
@@ -224,7 +227,9 @@ more clearly.
 </tbody>
 </table>
 
-\#\#\#Hobbies ![](./img/hobbies.jpeg)
+### Hobbies
+
+![](./img/hobbies.jpeg)
 
 Finally, we move on to my hobbies. In addition to plotting how much time
 I intended to spend/actually did spend on my hobbies, for comparison
@@ -277,7 +282,8 @@ the Amherst College DQ!
 
 ![Me singing with the DQ!](./img/singgif.gif)
 
-\#\#Answering My Questions of Interest:
+Answering My Questions of Interest:
+-----------------------------------
 
 On a weekly basis, what activity do I spend most of my time on?
 
@@ -301,7 +307,8 @@ on campus?
     intend to spend 195 minutes a week. Before quarantine, I spent 660
     minutes per week on hobbies, 560 more than I’m spending now.
 
-\#\#Reflection
+Reflection
+----------
 
 This project has been extremely insightful to looking at how I spend my
 time. With this insight, I think I’m going to continue to use Google

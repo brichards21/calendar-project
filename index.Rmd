@@ -168,7 +168,7 @@ Then, during the days, I would record what I actually did in a separate schedule
 
 At the end of this approximately two week period, I collected my data for wrangling and analysis.
 
-###Motivation + Primary Questions of Interest
+### Motivation + Primary Questions of Interest
 Here are the primary questions of interest that I wanted to answer at the end of the two weeks.
 
 - On a weekly basis, what activity do I spend most of my time on? 
@@ -218,7 +218,7 @@ ggplot(data = real_grouped, aes(x = activity, y = min_spent_per_day, fill = week
 
 ```
 
-###Homework
+### Homework
 ![](./img/homework.png)
 
 What's interesting here though, is even though I spent the most time doing homework on Wednesdays as I intended, I actually spent the same amount of time doing homework on Saturdays as well (480 minutes/ 8 hours each). Furthermore, as I expected to do the least amount of homework on Fridays, I actually did almost the same amount of homework on Fridays as I did on Wednesdays and Saturdays. I actually did the least amount of homework on Thursdays. 
@@ -286,7 +286,7 @@ My hobbies were actually sprinkled into my schedule, but lo and behold, I actual
 
 
 
-###Homework and Multitasking 
+### Homework and Multitasking 
 
 Now, let's focus on homework and multitasking. I decided to do this because I had a unique multitasking element to doing homework that I didn't list for any other activity in my schedules. When I was just doing homework, I marked that activity as 'Homework'. But when I did homework at the same time as another activity, I would mark it as 'Homework + (insert activity here)'. In my case, the other activity was always either watching anime or gaming. 
 \newline
@@ -369,7 +369,9 @@ setattr(homework_df_show, "row.names", c("No Multitasking", "Multitasking"))
 | No Multitasking                                   | 0.6229508       | 0.7794872           |
 | Multitasking                                      | 0.3770492       | 0.2205128           |
 
-###Hobbies
+
+### Hobbies
+
 ![](./img/hobbies.jpeg)
 
 Finally, we move on to my hobbies. In addition to plotting how much time I intended to spend/actually did spend on my hobbies, for comparison purposes, I also plotted how much time I spent on my hobbies when I was on campus. 
@@ -439,7 +441,7 @@ Check out these gifs below of me dancing and singing with  ACSU Dance and the Am
 ![Me singing with the DQ!](./img/singgif.gif)
 
 
-##Answering My Questions of Interest:
+## Answering My Questions of Interest:
 
 On a weekly basis, what activity do I spend most of my time on?
 \newline
@@ -463,7 +465,7 @@ How much time per week am I spending on my hobbies now, vs. when I was on campus
 
 
 
-##Reflection
+## Reflection
 
 This project has been extremely insightful to looking at how I spend my time. With this insight, I think I'm going to continue to use Google Calendar to budget my time, and to get a better idea of what I can do to adjust my intended schedule in order to influence what I ultimately get done in the end. To be more specific, I'm looking to spend more time on my hobbies, especially since summer vacation is coming up soon! 
 
