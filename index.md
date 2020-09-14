@@ -107,32 +107,7 @@ homework on Thursdays. The animated bar chart and table below look at
 homework more closely, and highlights the differences between my two
 schedules.
 
-    ## New names:
-    ## * weekday -> weekday...1
-    ## * activity -> activity...2
-    ## * total_min -> total_min...3
-    ## * min_spent_per_day -> min_spent_per_day...4
-    ## * weekday -> weekday...5
-    ## * ...
-
 ![](index_files/figure-markdown_strict/unnamed-chunk-5-1.gif)
-
-    grouped_homework_col <- grouped_homework_col%>%
-      rename(weekday = weekday...1, min_spent_per_day = min_spent_per_day...4, min_spent_per_day1 = min_spent_per_day...8) %>%
-      select(weekday, min_spent_per_day, min_spent_per_day1)
-
-    grouped_homework_col
-
-    ## # A tibble: 7 x 3
-    ##   weekday   min_spent_per_day min_spent_per_day1
-    ##   <chr>                 <dbl>              <dbl>
-    ## 1 Friday                  440                200
-    ## 2 Monday                  270                405
-    ## 3 Saturday                480                405
-    ## 4 Sunday                  300                390
-    ## 5 Thursday                180                435
-    ## 6 Tuesday                 375                450
-    ## 7 Wednesday               480                540
 
 <table>
 <thead>
@@ -220,7 +195,7 @@ studying and work when I have one of my favorite shows playing as my
 ‘homework-soundtrack’. The bar chart and table below show my results
 more clearly.
 
-![](index_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 <table>
 <thead>
@@ -269,7 +244,7 @@ lot less time engaging in those activities.
 I really do enjoy singing and dancing, and I hope that this revelation
 motivates me to spend more time on the things that I enjoy the most.
 
-![](index_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 While I intended to dance for about 20 minutes each Friday, I ended up
 doing no dancing at all. This makes sense for me personally since I
@@ -280,7 +255,7 @@ all on Wednesdays, and on Fridays, I only spent 55 minutes singing. I
 also indulged in singing on Thursdays for about 45 minutes, which I did
 not originally plan to do.
 
-![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
 As mentioned before, I can compare my time spent on hobbies during
 quarantine to my time spent on hobbies before quarantine. Before
@@ -293,7 +268,7 @@ Evidently, my dancing productivity has gone down by 4 hours a week, and
 my singing productivity has gone down by 320 minutes, or 5.33 hours a
 week. :(
 
-![](index_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](index_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
 Check out these gifs below of me dancing and singing with ACSU Dance and
 the Amherst College DQ!
